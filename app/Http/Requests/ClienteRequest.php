@@ -13,7 +13,7 @@ class ClienteRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,20 @@ class ClienteRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nome' => 'required|max:100',
+            'cpf' => 'required|max:11',
+            'telefone' => 'required|max:15',
+            'endereco' => 'required|max:150'
+        ];
+    }
+
+    public function messages()
+    {
+        return[
+                'nome.*' => 'A nome é obrigatória,  com um maximo de 100 caracteres!!',
+                'cpf.*' => 'CPF é obrigatório!',
+                'telefone.*' => 'Telefone é obrigatório!',
+                'endereco.*' => 'O endereco é obrigatório, com um maximo de 150 caracteres!'
         ];
     }
 }

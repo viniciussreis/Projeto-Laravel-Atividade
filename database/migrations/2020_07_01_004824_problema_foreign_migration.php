@@ -15,7 +15,7 @@ class ProblemaForeignMigration extends Migration
     {
         Schema::table('problemas', function (Blueprint $table) {
             $table->integer('carro_id')->unsigned();
-            $table->foreign('carro_id')->references('id')->on('carros');
+            $table->foreign('carro_id')->references('id')->on('carros')->onDelete('cascade');
         });
     }
 

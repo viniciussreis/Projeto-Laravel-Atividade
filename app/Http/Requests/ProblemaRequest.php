@@ -13,7 +13,7 @@ class ProblemaRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class ProblemaRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'descricao' => 'required|max:100'
+        ];
+    }
+
+    public function messages()
+    {
+        return[
+                'descricao.*' => 'É necessario descrever o problema,  com um maximo de 100 caracteres!'
         ];
     }
 }

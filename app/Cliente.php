@@ -9,6 +9,6 @@ class Cliente extends Model
     protected $fillable = ['nome','cpf','telefone','endereco'];
 
     public function carros(){
-        return $this->hasMany('App\Carros');
+        return $this->hasMany('App\Carro');
     }
 }

@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::resource('carro','CarroController');
+
+Route::resource('mecanico','MecanicoController');
+
+Route::resource('cliente','ClienteController');
+
+Route::resource('problema','ProblemaController');

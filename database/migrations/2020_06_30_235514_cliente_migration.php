@@ -18,7 +18,7 @@ class ClienteMigration extends Migration
             $table->string('nome', 100);
             $table->string('cpf', 11);
             $table->string('telefone', 15);
-            $table->string('adress', 150);
+            $table->string('endereco', 150);
             $table->timestamps();
         });
     }

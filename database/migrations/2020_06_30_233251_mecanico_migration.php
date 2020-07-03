@@ -15,7 +15,7 @@ class MecanicoMigration extends Migration
     {
         Schema::create('mecanicos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
+            $table->string('nome', 100);
             $table->string('cpf', 11);
             $table->timestamps();
         });

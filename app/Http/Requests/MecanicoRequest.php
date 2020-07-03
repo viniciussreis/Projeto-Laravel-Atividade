@@ -13,7 +13,7 @@ class MecanicoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class MecanicoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nome' => 'required|max:100',
+            'cpf' => 'required|max:11',
+        ];
+    }
+
+    public function messages()
+    {
+        return[
+                'nome.*' => 'A nome é obrigatória,  com um maximo de 100 caracteres!!',
+                'cpf.*' => 'CPF é obrigatório!'
         ];
     }
 }

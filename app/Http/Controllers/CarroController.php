@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Carro;
+use App\Cliente;
+use App\Mecanico;
 use App\Http\Requests\CarroRequest;
 
 class CarroController extends Controller
@@ -27,7 +29,9 @@ class CarroController extends Controller
      */
     public function create()
     {
-        return View('carro.create');
+        $clientes = \App\Cliente::all();
+        $mecanicos = \App\Mecanico::all();
+        return View('carro.create', compact('clientes','mecanicos'));
     }
 
     /**
@@ -50,7 +54,11 @@ class CarroController extends Controller
      */
     public function show($id)
     {
-        return View('carro.show')->with('carro',Carro::find($id));
+        $carro = Carro::find($id);
+        $problemas = $carro->problemas()->get();
+        $cliente = Cliente::find($carro->cliente_id);
+        $mecanico = Mecanico::find($carro->mecanico_id);
+        return View('carro.show', compact('carro', 'problemas', 'cliente', 'mecanico'));
     }
 
     /**
@@ -61,7 +69,10 @@ class CarroController extends Controller
      */
     public function edit($id)
     {
-        return View('carro.edit')->with('carro',Carro::find($id));   
+        $clientes = \App\Cliente::all();
+        $mecanicos = \App\Mecanico::all();
+        $carro = Carro::find($id);
+        return View('carro.edit', compact('clientes', 'mecanicos', 'carro'));
     }
 
     /**
@@ -74,7 +85,7 @@ class CarroController extends Controller
     public function update(CarroRequest $request, $id)
     {
         $carro = Carro::find($id);
-        $funcionario->update($request->all());
+        $carro->update($request->all());
         return redirect('/carro');
     }
 

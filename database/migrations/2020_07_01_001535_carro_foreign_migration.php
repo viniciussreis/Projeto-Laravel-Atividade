@@ -17,8 +17,8 @@ class CarroForeignMigration extends Migration
             $table->integer('cliente_id')->unsigned();
             $table->integer('mecanico_id')->unsigned();
 
-            $table->foreign('cliente_id')->references('id')->on('clientes');
-            $table->foreign('mecanico_id')->references('id')->on('mecanicos');
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreign('mecanico_id')->references('id')->on('mecanicos')->onDelete('cascade');
         });
     }
 

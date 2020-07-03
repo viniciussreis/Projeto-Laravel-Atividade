@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carro extends Model
 {
-    protected $fillable = ['placa','modelo','ano','cor'];
+    protected $fillable = ['placa','modelo','ano','cor','cliente_id','mecanico_id'];
 
     public function clientes(){
         return $this->belongsTo('App\Cliente');
