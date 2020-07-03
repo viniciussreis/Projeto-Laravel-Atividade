@@ -40,7 +40,7 @@
 						@endif
 					</div>
 
-                    <div lass="form-group">
+                    <div class="form-group">
 						<label for="cliente_id">Cliente</label>
 						<select name="cliente_id" id="cliente_id" class="form-control">
 							@foreach($clientes as $cliente)
@@ -49,7 +49,7 @@
 						</select>
 					</div>
 
-                    <div lass="form-group">
+                    <div class="form-group">
 						<label for="mecanico_id">Mecânico</label>
 						<select name="mecanico_id" id="mecanico_id" class="form-control">
 							@foreach($mecanicos as $mecanico)

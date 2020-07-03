@@ -15,7 +15,7 @@
 						@endif
 					</div>
 					
-                    <div>
+                    <div class="form-group">
 						<label for="cpf">CPF</label>
 						<input type="cpf" name="cpf" id="cpf" class="form-control" value="{{old('cpf')}}"/>
 						@if($errors->has('cpf'))
@@ -23,7 +23,7 @@
 						@endif
 					</div>
 
-					<div>
+					<div class="form-group">
 						<label for="telefone">Telefone</label>
 						<input type="telefone" name="telefone" id="telefone" class="form-control" value="{{old('telefone')}}"/>
 						@if($errors->has('telefone'))
@@ -31,13 +31,14 @@
 						@endif
 					</div>
 
-                    <div>
+                    <div class="form-group">
 						<label for="endereco">Endereco</label>
 						<input type="text" name="endereco" id="endereco" class="form-control" value="{{old('endereco')}}"/>
 						@if($errors->has('endereco'))
 						    <p class="text-danger">{{$errors->first('endereco')}}</p>
 						@endif
 					</div>
+
 		    		<input type="submit" value="Criar" class="btn btn-primary btn-sm"/>
 		    		<a href="/cliente" class="btn btn-primary btn-sm">Voltar</a>
 				</form>

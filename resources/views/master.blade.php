@@ -12,7 +12,10 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-	<a class="navbar-brand" href="/">Trampo</a>
+	<a class="navbar-brand" href="/">
+		<img src="/pneuLogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		Oficina
+	</a>
 		<ul class="navbar-nav mr-auto">
 		<li class="nav-item">
 			<a class="nav-link" href="/cliente">Clientes</a>

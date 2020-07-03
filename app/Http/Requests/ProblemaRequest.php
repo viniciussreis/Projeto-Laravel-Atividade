@@ -24,14 +24,16 @@ class ProblemaRequest extends FormRequest
     public function rules()
     {
         return [
-            'descricao' => 'required|max:100'
+            'descricao' => 'required|max:100',
+            'carro_id' => 'required'
         ];
     }
 
     public function messages()
     {
         return[
-                'descricao.*' => 'É necessario descrever o problema,  com um maximo de 100 caracteres!'
+                'descricao.*' => 'É necessario descrever o problema,  com um maximo de 100 caracteres!',
+                'carro_id.*' => 'É necessario selecionar um carro para o problema!'
         ];
     }
 }

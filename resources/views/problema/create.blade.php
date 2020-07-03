@@ -15,13 +15,16 @@
 						@endif
 					</div>
 					
-                    <div lass="form-group">
+                    <div class="form-group">
 						<label for="carro_id">Carro</label>
 						<select name="carro_id" id="carro_id" class="form-control">
 							@foreach($carros as $carro)
 								<option value="{{$carro->id}}">{{$carro->placa}} - {{$carro->modelo}} - {{$carro->ano}} - {{$carro->cor}}</option>
 							@endforeach
 						</select>
+						@if($errors->has('carro_id'))
+						    <p class="text-danger">{{$errors->first('carro_id')}}</p>
+						@endif
 					</div>
 
 		    		<input type="submit" value="Criar" class="btn btn-primary btn-sm"/>

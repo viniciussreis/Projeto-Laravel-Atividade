@@ -15,7 +15,7 @@
 						@endif
 					</div>
 					
-                    <div>
+                    <div class="form-group">
 						<label for="cpf">CPF</label>
 						<input type="cpf" name="cpf" id="cpf" class="form-control" value="{{old('cpf')}}"/>
 						@if($errors->has('cpf'))

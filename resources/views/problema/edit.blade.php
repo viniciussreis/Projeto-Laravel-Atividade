@@ -16,7 +16,7 @@
 						@endif	
 					</div>
 
-                    <div lass="form-group">
+                    <div class="form-group">
 						<label for="carro_id">Carro</label>
 						<select name="carro_id" id="carro_id" class="form-control">
 							@foreach($carros as $carro)
@@ -26,7 +26,7 @@
 					</div>
 
 					<input type="submit" value="Alterar" class="btn btn-primary btn-sm"/>
-		    		<a href="/funcionario" class="btn btn-primary btn-sm">Voltar</a>
+		    		<a href="/problema" class="btn btn-primary btn-sm">Voltar</a>
 				</form>
 			</div>
 		</div>

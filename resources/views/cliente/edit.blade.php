@@ -41,7 +41,7 @@
 					</div>
 		    		
 					<input type="submit" value="Alterar" class="btn btn-primary btn-sm"/>
-		    		<a href="/funcionario" class="btn btn-primary btn-sm">Voltar</a>
+		    		<a href="/cliente" class="btn btn-primary btn-sm">Voltar</a>
 				</form>
 			</div>
 		</div>
